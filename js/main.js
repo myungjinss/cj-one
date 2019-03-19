@@ -9,7 +9,7 @@ $(function(){
 	}
 
 		$("nav.gnb>ul>li>a").bind("mouseover focus",function(){
-		$(".header_wrap").stop().animate({"height":"500px"},10,function(){
+		$(".header_wrap").stop().animate({"height":"455px"},10,function(){
 			$("nav.gnb > ul > li > ul").css("display","block");
 		});	
 	});
@@ -37,7 +37,7 @@ $(function(){
 		});
 	});
 
-	 /* °í°´¼¾ÅÍ */
+	 /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	$(".customer > a").click(function(e){
 		e.preventDefault();
 
@@ -51,20 +51,20 @@ $(function(){
 			$(this).next().toggle();
 	});
 
-	//¾Ö´Ï¸ÞÀÌ¼Ç
+	//ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
 	for(i=0; i<=81; i++){
 		if(i<10){
 			$(".join>a").append("<img src = 'images/loop/loop_0000"+i+".png'>");
 		}else{
 			$(".join>a").append("<img src = 'images/loop/loop_000"+i+".png'>");
 		}
-	} //ÀÚµ¿ Àç»ý
+	} //ï¿½Úµï¿½ ï¿½ï¿½ï¿½
 	for(var i=0;i<=81;i++){
 		$(".join img").eq(i).css({"animation": "play 4.1s linear "+ 0.05 *i +"s infinite normal"});
 	}
 	
 
-	/*  main_wrap ¹è³Ê */
+	/*  main_wrap ï¿½ï¿½ï¿½ */
 	var $bnnNum=0;
 
 	$("div.arrow > a.next").click(function(e){
@@ -84,9 +84,9 @@ $(function(){
 		$("div.bannerzone").animate({"left":-$book_w*$bnnNum},300,"linear");
 	});
 
-//ÀÚµ¿ ¹è³Ê
+//ï¿½Úµï¿½ ï¿½ï¿½ï¿½
 	
-	var banner=null; //ºñ¾îÀÖÀ½
+	var banner=null; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	function myAuto(){
 		var imgs=3;
 		var now=0;
@@ -100,18 +100,18 @@ $(function(){
 			});
 		},3000);
 	}
-	myAuto(); //È£Ãâ
+	myAuto(); //È£ï¿½ï¿½
 
-	// pause¹öÆ°
+	// pauseï¿½ï¿½Æ°
 	var flag=1; //true
 	$(".stop a").click(function(){
 		
 		if(flag){
-			clearInterval(banner); //´Ù½Ã ºñ¿ò
+			clearInterval(banner); //ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½
 			$(this).children("img").attr("src","images/btn_banner_start.png")
 			flag=0;
 		}else{
-			myAuto(); //È£Ãâ
+			myAuto(); //È£ï¿½ï¿½
 			$(this).children("img").attr("src","images/btn_banner_stop.png")
 			flag=1;
 		}
@@ -120,7 +120,7 @@ $(function(){
 	
 	
 
-	 /* cj±×·ì °è¿­»ç ¹Ù·Î°¡±â */
+	 /* cjï¿½×·ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Ù·Î°ï¿½ï¿½ï¿½ */
 	$(".Shortcut > a").click(function(e){
 		e.preventDefault();
 
@@ -136,7 +136,7 @@ $(function(){
 
 
 });
-/* µ¸º¸±â */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
  $(document).ready(function(){
 	
 	var flag=1;
