@@ -1,33 +1,7 @@
 @charset "utf-8";
-/* main2.css */
 
-/* reset */
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: "돋움", dotum, sans-serif;
-	font-size: 12px;
-	color: #000;
-}
-
-ol,
-ul,
-li {
-	list-style: none;
-}
-
-img {
-	border: 0;
-	vertical-align: top;
-}
-
-a {
-	color: #fff;
-	text-decoration: none;
-}
+@import "scss/reset.scss";
+@import "scss/font/nanum-barun-gothic.scss";
 
 .blind {
 	display: none;
@@ -5779,19 +5753,29 @@ a {
 						padding: 5px 10px 0 10px;
 						// height: 24px;
 						margin-top: 10px;
+						@include nanum-barun-gothic-regular();
 						a {
-							opacity: 0.5;
+							// opacity: 0.5;
 							transition: all 0.4s;
 							color: #9f9f9f;
-							font-size: 12px;
-							// line-height: 12px;
+							font-size: 11.5px;
+							@include nanum-barun-gothic-regular();
 							&:hover{
-								opacity: 1;
+								color: #fff
 							}
 						}
 						ul {
 							display: none;
 						}
+					}
+					.card{
+						width: 67px;
+						height: 25px;
+						border-radius: 3px;
+						background-color: #2d2d2d;
+						padding: 0;
+						line-height: 25px;
+						text-align: center;
 					}
 					.customer {
 						width: 86px;
@@ -5838,11 +5822,12 @@ a {
 							float: left;
 							text-align: left;
 							color: #fff;
-							font-size: 16px;
-							font-weight: bold;
-							letter-spacing: -0.5px;
+							font-size: 15px;
+							@include nanum-barun-gothic-medium();
+							// letter-spacing: -0.5px;
 							a{
 								margin-right: 60px;
+								@include nanum-barun-gothic-medium();
 							}
 							ul{
 								display: none;
@@ -5901,6 +5886,71 @@ a {
 					}
 				}
 			}
+			// serach inner
+			.global_search {
+				width: 100%;
+				height: 153px;
+				display: none;
+				background-color: #f8f8f8;
+				position: absolute;
+				top: 120px;
+				left: 0;
+				.search_sec {
+					position: relative;
+					max-width: 1060px;
+					margin: 0 auto;
+					padding: 40px 0 15px;
+				}
+				.search_box {
+					position: relative;
+					width: 668px;
+					margin: 0 auto;
+					.input_txt {
+						display: block;
+						position: relative;
+						width: 548px;
+						height: 60px;
+						padding-right: 0;
+						vertical-align: top;
+						input {
+							width: 514px;
+							height: 56px;
+							border: 2px solid #222;
+							color: #222;
+							font-size: 18px;
+							line-height: 56px;
+							padding: 0 15px;
+						}
+					}
+					.btn_search {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 120px;
+						height: 60px;
+						background: #333;
+						color: #fff;
+						font-size: 18px;
+						border: 0;
+					}
+				}
+			}
+			// .input_txt {
+			// 	display: inline-block;
+			// 	height: 34px;
+			// 	padding-right: 32px;
+			// 	vertical-align: middle;
+			// }
+			// .input_txt input {
+			// 	border: 1px solid #ddd;
+			// 	color: #888;
+			// 	display: block;
+			// 	font-size: 14px;
+			// 	height: 32px;
+			// 	line-height: 32px;
+			// 	padding: 0 15px;
+			// 	width: 100%;
+			// }
 		}
 	}
 	
@@ -5914,78 +5964,6 @@ a {
 
 	p.close {
 		display: none;
-	}
-
-
-	.global_search {
-		display: none;
-		background-color: #f8f8f8;
-		height: 153px;
-		left: 0;
-		position: absolute;
-		top: 120px;
-		width: 100%;
-	}
-
-	.search_sec {
-		margin: 0 auto;
-		max-width: 1060px;
-		padding: 40px 0 15px;
-		position: relative;
-	}
-
-	.search_box {
-		margin: 0 auto;
-		position: relative;
-		width: 668px;
-	}
-
-	.search_box .input_txt {
-		display: block;
-		height: 60px;
-		padding-right: 0;
-		position: relative;
-		vertical-align: top;
-		width: 548px;
-	}
-
-	.input_txt {
-		display: inline-block;
-		height: 34px;
-		padding-right: 32px;
-		vertical-align: middle;
-	}
-
-	.search_box .input_txt input {
-		border: 2px solid #222;
-		color: #222;
-		font-size: 18px;
-		height: 56px;
-		line-height: 56px;
-		width: 514px;
-	}
-
-	.input_txt input {
-		border: 1px solid #ddd;
-		color: #888;
-		display: block;
-		font-size: 14px;
-		height: 32px;
-		line-height: 32px;
-		padding: 0 15px;
-		width: 100%;
-	}
-
-	.btn_search {
-		position: absolute;
-		right: 0;
-		top: -2px;
-		width: 122px;
-		height: 62px;
-		background: #000;
-		color: #fff;
-		font-size: 15px;
-		font-weight: bold;
 	}
 
 	@keyframes play {

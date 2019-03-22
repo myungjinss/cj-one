@@ -1,0 +1,35 @@
+@mixin nanum-barun-gothic-thin {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 100;
+}
+
+@mixin nanum-barun-gothic-light {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 300;
+}
+
+@mixin nanum-barun-gothic-regular {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 400;
+}
+
+@mixin nanum-barun-gothic-medium {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 500;
+}
+
+@mixin nanum-barun-gothic-bold {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 700;
+}
+
+@mixin nanum-barun-gothic-black {
+    font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+    font-style: 'normal';
+    font-weight: 900;
+}
