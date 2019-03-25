@@ -1,0 +1,45 @@
+// 인풋의 플레이스 홀더 색 지정
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        @include nanum-barun-gothic-medium();
+    }
+    &:-moz-placeholder {
+        color: $color;
+        @include nanum-barun-gothic-medium();
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        @include nanum-barun-gothic-medium();
+    }
+}
+
+// 인풋의 플레이스 홀더 숨기기
+@mixin no-display-placeholder() {
+    &::-webkit-input-placeholder {
+        display: none;
+    }
+    &:-moz-placeholder {
+        display: none;
+    }
+    &:-ms-input-placeholder {
+        display: none;
+    }
+}
+
+// ie의 input의 X 버튼 숨기기
+@mixin no-display-input-reveal() {
+    &::-ms-reveal {
+        display: none;
+    } 
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+// ie의 select arrow 숨기기
+@mixin no-display-arrow-select() {
+    &::-ms-expand {
+        display: none;
+    }
+}

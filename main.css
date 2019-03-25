@@ -3972,11 +3972,19 @@ button {
         /* 돋보기 */
         /* join */ }
         body > header .header_wrap .myInfo .search {
-          width: 24px;
-          height: 24px;
+          display: inline-block;
+          width: 35px;
+          height: 56px;
           float: left;
-          background: url("images/btn_gnb_search1.png") no-repeat 0 0;
-          margin: 7px 20px 0 6px; }
+          margin-right: 20px; }
+          body > header .header_wrap .myInfo .search a {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin: 7px 0 0 6px;
+            background: url("images/btn_gnb_search.png") no-repeat 0 0; }
+        body > header .header_wrap .myInfo .on {
+          background: url("images/bg_gnb_search.png") no-repeat 0 0; }
         body > header .header_wrap .myInfo .join {
           width: 72px;
           height: 56px;
@@ -4009,7 +4017,7 @@ button {
             position: relative;
             width: 548px;
             height: 60px;
-            padding-right: 0;
+            padding: 0;
             vertical-align: top; }
             body > header .header_wrap .global_search .search_box .input_txt input {
               width: 514px;
@@ -4017,8 +4025,27 @@ button {
               border: 2px solid #222;
               color: #222;
               font-size: 18px;
+              font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+              font-style: 'normal';
+              font-weight: 500;
               line-height: 56px;
-              padding: 0 15px; }
+              padding: 0 15px;
+              vertical-align: middle; }
+              body > header .header_wrap .global_search .search_box .input_txt input::-webkit-input-placeholder {
+                color: #f4790b;
+                font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+                font-style: 'normal';
+                font-weight: 500; }
+              body > header .header_wrap .global_search .search_box .input_txt input:-moz-placeholder {
+                color: #f4790b;
+                font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+                font-style: 'normal';
+                font-weight: 500; }
+              body > header .header_wrap .global_search .search_box .input_txt input:-ms-input-placeholder {
+                color: #f4790b;
+                font-family: Arial, nbgr, '나눔바른고딕', '돋음';
+                font-style: 'normal';
+                font-weight: 500; }
           body > header .header_wrap .global_search .search_box .btn_search {
             position: absolute;
             top: 0;

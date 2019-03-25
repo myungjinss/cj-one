@@ -148,6 +148,46 @@ $(document).ready(function () {
 		}
 	});
 });
+// $(document).ready(function () {
+
+// 	var flag = 1;
+// 	$("div.search").click(function () {
+
+// 		if (flag) {
+// 			$("div.search .on").css("display", "block");
+// 			flag = 0;
+// 		} else {
+// 			$("div.search .on").css("display", "none");
+// 			flag = 1;
+// 		}
+// 	});
+// });
+$(".search").click(function (e) {
+	e.preventDefault();
+
+	if ($(this).next().is(":hidden")) {
+		$(this).parent().addClass("on");
+
+	} else if ($(this).next().is(":visible")) {
+		$(this).parent().removeClass("on");
+	}
+
+	$(this).next().toggle();
+});
+$(document).ready(function () {
+
+	var flag = 1;
+	$("div.search").click(function () {
+
+		if (flag) {
+			$("div.search a").css("background-position", "0 -24px");
+			flag = 0;
+		} else {
+			$("div.search a").css("background-position", "0 0");
+			flag = 1;
+		}
+	});
+});
 /* gnb2 ul */
 $(document).ready(function () {
 

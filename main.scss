@@ -2,6 +2,7 @@
 
 @import "scss/reset.scss";
 @import "scss/font/nanum-barun-gothic.scss";
+@import "scss/input.scss";
 
 .blind {
 	display: none;
@@ -5862,11 +5863,21 @@
 				right: 0;
 				/* 돋보기 */
 				.search{
-					width: 24px;
-					height: 24px;
+					display: inline-block;
+					width: 35px;
+					height: 56px;
 					float: left;
-					background: url('images/btn_gnb_search1.png') no-repeat 0 0;
-					margin: 7px 20px 0 6px;
+					margin-right: 20px;
+					a{
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						margin: 7px 0 0 6px;
+						background: url('images/btn_gnb_search.png') no-repeat 0 0;
+					}
+				}
+				.on{
+					background: url('images/bg_gnb_search.png') no-repeat 0 0;
 				}
 				/* join */
 				.join {
@@ -5904,13 +5915,14 @@
 				.search_box {
 					position: relative;
 					width: 668px;
+					// height: 56px;
 					margin: 0 auto;
 					.input_txt {
 						display: block;
 						position: relative;
 						width: 548px;
 						height: 60px;
-						padding-right: 0;
+						padding: 0;
 						vertical-align: top;
 						input {
 							width: 514px;
@@ -5918,8 +5930,11 @@
 							border: 2px solid #222;
 							color: #222;
 							font-size: 18px;
+							@include nanum-barun-gothic-medium();
 							line-height: 56px;
 							padding: 0 15px;
+							vertical-align: middle;
+							@include placeholder-color(#f4790b);
 						}
 					}
 					.btn_search {
