@@ -87,7 +87,7 @@ $(function () {
 
 	var banner = null;
 	function myAuto() {
-		var imgs = 3;
+		var imgs = 8;
 		var now = 0;
 		banner = setInterval(function () {
 			if (now == imgs) now = -1;
@@ -148,32 +148,20 @@ $(document).ready(function () {
 		}
 	});
 });
-// $(document).ready(function () {
 
-// 	var flag = 1;
-// 	$("div.search").click(function () {
+// $(".search").click(function (e) {
+// 	e.preventDefault();
 
-// 		if (flag) {
-// 			$("div.search .on").css("display", "block");
-// 			flag = 0;
-// 		} else {
-// 			$("div.search .on").css("display", "none");
-// 			flag = 1;
-// 		}
-// 	});
+// 	if ($(this).next().is(":hidden")) {
+// 		$(this).parent().addClass("on");
+
+// 	} else if ($(this).next().is(":visible")) {
+// 		$(this).parent().removeClass("on");
+// 	}
+
+// 	$(this).next().toggle();
 // });
-$(".search").click(function (e) {
-	e.preventDefault();
 
-	if ($(this).next().is(":hidden")) {
-		$(this).parent().addClass("on");
-
-	} else if ($(this).next().is(":visible")) {
-		$(this).parent().removeClass("on");
-	}
-
-	$(this).next().toggle();
-});
 $(document).ready(function () {
 
 	var flag = 1;
