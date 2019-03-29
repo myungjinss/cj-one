@@ -72,7 +72,7 @@ $(function () {
 
 		$bnnNum++;
 		$book_w = $("body>section").width();
-		$("div.bannerzone").animate({ "left": -$book_w * $bnnNum }, 300, "linear", function () { });
+		$("div.bannerzone").animate({ "left": -$book_w * $bnnNum }, 0, "linear", function () { });
 	});
 
 	$("div.arrow > a.prev").click(function (e) {
@@ -81,13 +81,13 @@ $(function () {
 		$bnnNum--;
 		$book_w = $("body>section").width();
 
-		$("div.bannerzone").animate({ "left": -$book_w * $bnnNum }, 300, "linear");
+		$("div.bannerzone").animate({ "left": -$book_w * $bnnNum }, 0, "linear");
 	});
 
 
 	var banner = null;
 	function myAuto() {
-		var imgs = 8;
+		var imgs = 3;
 		var now = 0;
 		banner = setInterval(function () {
 			if (now == imgs) now = -1;
@@ -99,7 +99,7 @@ $(function () {
 			});
 		}, 3000);
 	}
-	myAuto(); 
+	// myAuto(); 
 
 	var flag = 1; //true
 	$(".stop a").click(function () {
@@ -162,7 +162,20 @@ $(document).ready(function () {
 // 	$(this).next().toggle();
 // });
 
+
+
+
 $(document).ready(function () {
+	var search = document.getElementById('search');
+	search.addEventListener('click', function(e) {
+		if (search.classList.contains('on')) {
+			search.classList.remove('on');
+		} else {
+			search.classList.add('on');
+		}
+	}. bind(this));
+
+
 
 	var flag = 1;
 	$("div.search").click(function () {
