@@ -85,6 +85,26 @@ $(function () {
 	});
 
 
+	/* slide arrow */
+	var $bnnNum = 0;
+
+	$("div.arrow > a.next").click(function (e) {
+		e.preventDefault();
+
+		$bnnNum++;
+		$book_w = $("body>section>#slide>ul>li").width();
+		$("body>section>#slide>ul>li").animate({ "left": -$book_w * $bnnNum }, 0, "linear", function () { });
+	});
+
+	$("div.arrow > a.prev").click(function (e) {
+		e.preventDefault();
+
+		$bnnNum--;
+		$book_w = $("body>section>#slide>ul>li").width();
+
+		$("body>section>#slide>ul>li").animate({ "left": -$book_w * $bnnNum }, 0, "linear");
+	});
+
 	var banner = null;
 	function myAuto() {
 		var imgs = 3;

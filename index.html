@@ -9,6 +9,8 @@
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -111,8 +113,8 @@
 				<div class="search_sec">
 					<div class="search_box">
 						<span class="input_txt">
-							<input id="search_keyword" type="text" maxlength="200" value="" name="search_keyword" title="검색어 입력란"
-							placeholder="검색어를 입력해주세요.">
+							<input id="search_keyword" type="text" maxlength="200" value="" name="search_keyword"
+								title="검색어 입력란" placeholder="검색어를 입력해주세요.">
 						</span>
 						<button class="btn_search" type="button">검색</button>
 					</div>
@@ -120,171 +122,178 @@
 			</div>
 		</div>
 	</header>
-	<!-- main_wrap -->
+	<!-- slide -->
 	<section>
 		<h2 class="blind">배너</h2>
-		<div class="bannerzone">
-			<!-- <div class="bann_wrap">
-				<div class="backimg_wrap"><img src="img/20190327_0848151.jpg" alt="" /></div>
-				<div class="txt_wrap">
-					<div class="icon"><img src="img/20190307_1729221.png" alt="cjone" /></div>
-					<p class="big_txt">CJ ONE VIP WEEK<br />신비아파트 인터렉티브<br />무비 상영회 초대</p>
-					<p class="small_txt">응모기간: 3/87(수) ~ 4/10(수)<br />인터렉티브 무비 상영,미니콘서트,강림이와 팬미팅,선물이벤트 등 진행 예정</p>
-					<button>자세히 보기</button>
-				</div>
-			</div> -->
-			<div class="bann_wrap">
-				<div class="backimg_wrap"><img src="img/20190307_1729081.jpg" alt="" /></div>
-				<div class="txt_wrap">
-					<div class="icon"><img src="img/20190307_1729221.png" alt="cjone" /></div>
-					<p class="big_txt">주사위 던지면<br />CJMALL 쿠폰 100% 증정<br />아이패드 행운까지!</p>
-					<button>자세히 보기</button>
-				</div>
+		<div id="slide">
+			<input type="radio" name="pos" id="pos1" checked>
+			<input type="radio" name="pos" id="pos2">
+			<input type="radio" name="pos" id="pos3">
+			<input type="radio" name="pos" id="pos4">
+			<ul>
+				<li>
+					<div class="backimg_wrap"><img src="images/20190411_1036271.jpg" alt="" /></div>
+					<div class="txt_wrap">
+						<div class="icon"><img src="images/20190411_1036411.png" alt="cjone" /></div>
+						<p class="big_txt">매일 벚꽃 게임하고<br>공기청정기, 에어팟<br>내 맘대로 선물 받자!</p>
+						<button class="more-btn">자세히 보기</button>
+					</div>
+				</li>
+				<li>
+					<div class="backimg_wrap"><img src="images/20190416_0905401.jpg" alt="" /></div>
+					<div class="txt_wrap">
+						<div class="icon"><img src="images/20190416_0905001.png" alt="worldistour" /></div>
+						<p class="big_txt">가족이 뭉치면<br>여행이<br>더 맛있어진다!</p>
+						<p class="small_txt">기간: 4/15(월) ~ 4/30(화)</p>
+						<button class="more-btn">자세히 보기</button>
+					</div>
+				</li>
+				<li>
+					<div class="backimg_wrap"><img src="images/20190415_1344081.jpg" alt="" /></div>
+					<div class="txt_wrap">
+						<div class="icon"><img src="images/20190415_1344221.jpg" alt="ocn" /></div>
+						<p class="big_txt">오리지널씬2<br>말풍선 채워넣고<br>한정판 코믹북 득템!</p>
+						<p class="small_txt">OCN 오리지널씬2 X 강형규 작가의 콜라보레이션<br>4.16 ~ 4.28 한정판 코믹북 득템에 도전하세요!</p>
+						<button class="more-btn">자세히 보기</button>
+					</div>
+				</li>
+				<li>
+					<div class="backimg_wrap"><img src="images/20190410_0838001.jpg" alt="" /></div>
+					<div class="txt_wrap">
+						<div class="icon"><img src="images/20190410_0838121.png" alt="ocn" /></div>
+						<p class="big_txt">눈 건강이 걱정될 땐,<br>CJ제일제당 아이시안<br>체험단 이벤트</p>
+						<p class="small_txt">눈건강기능식품 전문 브랜드 CJ제일제당 아이시안 설문조사에 참여해주세요.<br>250분께 CJ제일제당 아이시안 루테인을 드려요!</p>
+						<button class="more-btn">자세히 보기</button>
+					</div>
+				</li>
+			</ul>
+			<div class="arrow">
+				<a class="next" href="#" onclick="myFunction()"><img src="images/btn_banner_next.png" alt="다음으로" /></a>
+				<a class="prev" href="#"><img src="images/btn_banner_prev.png" alt="전으로" /></a>
 			</div>
-			<div class="bann_wrap">
-				<div class="backimg_wrap"><img src="img/20190305_1046431.jpg" alt="" /></div>
-				<div class="txt_wrap">
-					<div class="icon"><img src="img/20190305_1047001.png" alt="THE PLACE X ITALYJAE" /></div>
-					<p class="big_txt">신라인터넷면세점<br />신규회원 가입 시<br />CJ ONE 5천P 증정!</p>
-					<p class="small_txt">3.5~4.4, 신규 가입 고객 100% 증정</p>
-					<button>자세히 보기</button>
-				</div>
-			</div>
-			<div class="bann_wrap">
-				<div class="backimg_wrap"><img src="img/20190226_0858501.jpg" alt="" /></div>
-				<div class="txt_wrap">
-					<div class="icon"><img src="img/20190226_0859251.png" alt="cjone" /></div>
-					<p class="big_txt">CJ ONE WEEK<br />에르제:땡땡<br />SVIP,VVIP 본인 무료</p>
-					<p class="small_txt">SVIP,VVIP 본인 무료 초댜<br />VIP 45%,일반 35% 할인</p>
-					<button>자세히 보기</button>
-				</div>
-			</div>
-			<div class="bann_wrap">
-				<div class="backimg_wrap"><img src="img/20190218_1547051.jpg" alt="" /></div>
-				<div class="txt_wrap">
-					<div class="icon"><img src="img/20180730_1148011.png" alt="cjone" /></div>
-					<p class="big_txt">24시간 쉴 틈 없는 혜택!<br />카드 사용하면 5만포인트!</p>
-					<button>자세히 보기</button>
-				</div>
-			</div>
+			<p class="pos">
+				<label for="pos1"></label>
+				<label for="pos2"></label>
+				<label for="pos3"></label>
+				<label for="pos4"></label>
+			</p>
 		</div>
-		<div class="arrow">
-			<a class="next" href="#"><img src="images/btn_banner_next.png" alt="다음으로" /></a>
-			<a class="prev" href="#"><img src="images/btn_banner_prev.png" alt="전으로" /></a>
-		</div>
-		<ul class="banner_roll">
-			<li class="stop"><a href="#"><img src="images/btn_banner_stop.png" alt="cjone banner 일시정지" /></a></li>
-			<li class="btn"><a href="#"><img src="images/btn_banner_over.png" alt="cjone banner 비활성화 상태" /></a></li>
-			<li class="btn"><a href="#"><img src="images/btn_banner_out.png" alt="cjone banner 활성화 상태" /></a></li>
-			<li class="btn"><a href="#"><img src="images/btn_banner_out.png" alt="cjone banner 활성화 상태" /></a></li>
-			<li class="btn"><a href="#"><img src="images/btn_banner_out.png" alt="cjone banner 활성화 상태" /></a></li>
-		</ul>
 	</section>
 	<div class="quick_wrap">
 		<h2 class="blind">CJ ONE 서비스 바로가기</h2>
-		<ul>
-			<li class="quick_lick_card"><a href="#">
-					<img src="images/service/quick01_00000.png" alt="1" />
-					<img src="images/service/quick01_00001.png" alt="1" />
-					<img src="images/service/quick01_00002.png" alt="1" />
-					<img src="images/service/quick01_00003.png" alt="1" />
-					<img src="images/service/quick01_00004.png" alt="1" />
-					<img src="images/service/quick01_00005.png" alt="1" />
-					<img src="images/service/quick01_00006.png" alt="1" />
-					<img src="images/service/quick01_00007.png" alt="1" />
-					<img src="images/service/quick01_00008.png" alt="1" />
-					<img src="images/service/quick01_00009.png" alt="1" />
-					<img src="images/service/quick01_00010.png" alt="1" />
-					<img src="images/service/quick01_00011.png" alt="1" />
-					<img src="images/service/quick01_00012.png" alt="1" />
-					<img src="images/service/quick01_00013.png" alt="1" />
-					<img src="images/service/quick01_00014.png" alt="1" />
-					<img src="images/service/quick01_00015.png" alt="1" />
-					<img src="images/service/quick01_00016.png" alt="1" />
-					<img src="images/service/quick01_00017.png" alt="1" />
-					<img src="images/service/quick01_00018.png" alt="1" />
-					<img src="images/service/quick01_00019.png" alt="1" />
-					<h3>카드등록 안내</h3>
-					<p>발급받은 ONE 카드 등록하세요</p>
-				</a>
-			</li>
-			<li class="quick_lick_add_point"><a href="#">
-					<img src="images/service/quick02_00000.png" alt="1" />
-					<img src="images/service/quick02_00001.png" alt="1" />
-					<img src="images/service/quick02_00002.png" alt="1" />
-					<img src="images/service/quick02_00003.png" alt="1" />
-					<img src="images/service/quick02_00004.png" alt="1" />
-					<img src="images/service/quick02_00005.png" alt="1" />
-					<img src="images/service/quick02_00006.png" alt="1" />
-					<img src="images/service/quick02_00007.png" alt="1" />
-					<img src="images/service/quick02_00008.png" alt="1" />
-					<img src="images/service/quick02_00009.png" alt="1" />
-					<img src="images/service/quick02_00010.png" alt="1" />
-					<img src="images/service/quick02_00011.png" alt="1" />
-					<img src="images/service/quick02_00012.png" alt="1" />
-					<img src="images/service/quick02_00013.png" alt="1" />
-					<img src="images/service/quick02_00014.png" alt="1" />
-					<img src="images/service/quick02_00015.png" alt="1" />
-					<img src="images/service/quick02_00016.png" alt="1" />
-					<img src="images/service/quick02_00017.png" alt="1" />
-					<img src="images/service/quick02_00018.png" alt="1" />
-					<img src="images/service/quick02_00019.png" alt="1" />
-					<h3>포인트 적립처 안내</h3>
-					<p>구매 시 ONE 포인트 꼭! 적립하세요</p>
-				</a>
-			</li>
-			<li class="quick_lick_point"><a href="#">
-					<img src="images/service/quick03_00000.png" alt="1" />
-					<img src="images/service/quick03_00001.png" alt="1" />
-					<img src="images/service/quick03_00002.png" alt="1" />
-					<img src="images/service/quick03_00003.png" alt="1" />
-					<img src="images/service/quick03_00004.png" alt="1" />
-					<img src="images/service/quick03_00005.png" alt="1" />
-					<img src="images/service/quick03_00006.png" alt="1" />
-					<img src="images/service/quick03_00007.png" alt="1" />
-					<img src="images/service/quick03_00008.png" alt="1" />
-					<img src="images/service/quick03_00009.png" alt="1" />
-					<img src="images/service/quick03_00010.png" alt="1" />
-					<img src="images/service/quick03_00011.png" alt="1" />
-					<img src="images/service/quick03_00012.png" alt="1" />
-					<img src="images/service/quick03_00013.png" alt="1" />
-					<img src="images/service/quick03_00014.png" alt="1" />
-					<img src="images/service/quick03_00015.png" alt="1" />
-					<img src="images/service/quick03_00016.png" alt="1" />
-					<img src="images/service/quick03_00017.png" alt="1" />
-					<img src="images/service/quick03_00018.png" alt="1" />
-					<img src="images/service/quick03_00019.png" alt="1" />
-					<h3>보너스포인트 안내</h3>
-					<p>추가 적립 포인트 혜택을 받으세요</p>
-				</a>
-			</li>
-			<li class="quick_lick_coupon"><a href="#">
-					<img src="images/service/quick04_00000.png" alt="1" />
-					<img src="images/service/quick04_00001.png" alt="1" />
-					<img src="images/service/quick04_00002.png" alt="1" />
-					<img src="images/service/quick04_00003.png" alt="1" />
-					<img src="images/service/quick04_00004.png" alt="1" />
-					<img src="images/service/quick04_00005.png" alt="1" />
-					<img src="images/service/quick04_00006.png" alt="1" />
-					<img src="images/service/quick04_00007.png" alt="1" />
-					<img src="images/service/quick04_00008.png" alt="1" />
-					<img src="images/service/quick04_00009.png" alt="1" />
-					<img src="images/service/quick04_00010.png" alt="1" />
-					<img src="images/service/quick04_00011.png" alt="1" />
-					<img src="images/service/quick04_00012.png" alt="1" />
-					<img src="images/service/quick04_00013.png" alt="1" />
-					<img src="images/service/quick04_00014.png" alt="1" />
-					<img src="images/service/quick04_00015.png" alt="1" />
-					<img src="images/service/quick04_00016.png" alt="1" />
-					<img src="images/service/quick04_00017.png" alt="1" />
-					<img src="images/service/quick04_00018.png" alt="1" />
-					<img src="images/service/quick04_00019.png" alt="1" />
-					<h3>쿠폰혜택 안내</h3>
-					<p>다양한 할인 혜택을 받으세요</p>
-				</a></li>
-		</ul>
+		<div class="quick_lick">
+			<div class="img-wrap">
+				<img src="images/service/quick01_00000.png" alt="1" />
+				<img src="images/service/quick01_00001.png" alt="1" />
+				<img src="images/service/quick01_00002.png" alt="1" />
+				<img src="images/service/quick01_00003.png" alt="1" />
+				<img src="images/service/quick01_00004.png" alt="1" />
+				<img src="images/service/quick01_00005.png" alt="1" />
+				<img src="images/service/quick01_00006.png" alt="1" />
+				<img src="images/service/quick01_00007.png" alt="1" />
+				<img src="images/service/quick01_00008.png" alt="1" />
+				<img src="images/service/quick01_00009.png" alt="1" />
+				<img src="images/service/quick01_00010.png" alt="1" />
+				<img src="images/service/quick01_00011.png" alt="1" />
+				<img src="images/service/quick01_00012.png" alt="1" />
+				<img src="images/service/quick01_00013.png" alt="1" />
+				<img src="images/service/quick01_00014.png" alt="1" />
+				<img src="images/service/quick01_00015.png" alt="1" />
+				<img src="images/service/quick01_00016.png" alt="1" />
+				<img src="images/service/quick01_00017.png" alt="1" />
+				<img src="images/service/quick01_00018.png" alt="1" />
+				<img src="images/service/quick01_00019.png" alt="1" />
+			</div>
+			<div class="txt">
+				<h3>카드등록 안내</h3>
+				<p>발급받은 ONE 카드 등록하세요</p>
+			</div>
+		</div>
+		<div class="quick_lick point">
+			<div class="img-wrap">
+				<img src="images/service/quick02_00000.png" alt="1" />
+				<img src="images/service/quick02_00001.png" alt="1" />
+				<img src="images/service/quick02_00002.png" alt="1" />
+				<img src="images/service/quick02_00003.png" alt="1" />
+				<img src="images/service/quick02_00004.png" alt="1" />
+				<img src="images/service/quick02_00005.png" alt="1" />
+				<img src="images/service/quick02_00006.png" alt="1" />
+				<img src="images/service/quick02_00007.png" alt="1" />
+				<img src="images/service/quick02_00008.png" alt="1" />
+				<img src="images/service/quick02_00009.png" alt="1" />
+				<img src="images/service/quick02_00010.png" alt="1" />
+				<img src="images/service/quick02_00011.png" alt="1" />
+				<img src="images/service/quick02_00012.png" alt="1" />
+				<img src="images/service/quick02_00013.png" alt="1" />
+				<img src="images/service/quick02_00014.png" alt="1" />
+				<img src="images/service/quick02_00015.png" alt="1" />
+				<img src="images/service/quick02_00016.png" alt="1" />
+				<img src="images/service/quick02_00017.png" alt="1" />
+				<img src="images/service/quick02_00018.png" alt="1" />
+				<img src="images/service/quick02_00019.png" alt="1" />
+			</div>
+			<div class="txt">
+				<h3>포인트 적립처 안내</h3>
+				<p>구매 시 ONE 포인트 꼭! 적립하세요</p>
+			</div>
+		</div>
+		<div class="quick_lick">
+			<div class="img-wrap">
+				<img src="images/service/quick03_00000.png" alt="1" />
+				<img src="images/service/quick03_00001.png" alt="1" />
+				<img src="images/service/quick03_00002.png" alt="1" />
+				<img src="images/service/quick03_00003.png" alt="1" />
+				<img src="images/service/quick03_00004.png" alt="1" />
+				<img src="images/service/quick03_00005.png" alt="1" />
+				<img src="images/service/quick03_00006.png" alt="1" />
+				<img src="images/service/quick03_00007.png" alt="1" />
+				<img src="images/service/quick03_00008.png" alt="1" />
+				<img src="images/service/quick03_00009.png" alt="1" />
+				<img src="images/service/quick03_00010.png" alt="1" />
+				<img src="images/service/quick03_00011.png" alt="1" />
+				<img src="images/service/quick03_00012.png" alt="1" />
+				<img src="images/service/quick03_00013.png" alt="1" />
+				<img src="images/service/quick03_00014.png" alt="1" />
+				<img src="images/service/quick03_00015.png" alt="1" />
+				<img src="images/service/quick03_00016.png" alt="1" />
+				<img src="images/service/quick03_00017.png" alt="1" />
+				<img src="images/service/quick03_00018.png" alt="1" />
+				<img src="images/service/quick03_00019.png" alt="1" />
+			</div>
+			<div class="txt">
+				<h3>보너스포인트 안내</h3>
+				<p>추가 적립 포인트 혜택을 받으세요</p>
+			</div>
+		</div>
+		<div class="quick_lick">
+			<div class="img-wrap">
+				<img src="images/service/quick04_00000.png" alt="1" />
+				<img src="images/service/quick04_00001.png" alt="1" />
+				<img src="images/service/quick04_00002.png" alt="1" />
+				<img src="images/service/quick04_00003.png" alt="1" />
+				<img src="images/service/quick04_00004.png" alt="1" />
+				<img src="images/service/quick04_00005.png" alt="1" />
+				<img src="images/service/quick04_00006.png" alt="1" />
+				<img src="images/service/quick04_00007.png" alt="1" />
+				<img src="images/service/quick04_00008.png" alt="1" />
+				<img src="images/service/quick04_00009.png" alt="1" />
+				<img src="images/service/quick04_00010.png" alt="1" />
+				<img src="images/service/quick04_00011.png" alt="1" />
+				<img src="images/service/quick04_00012.png" alt="1" />
+				<img src="images/service/quick04_00013.png" alt="1" />
+				<img src="images/service/quick04_00014.png" alt="1" />
+				<img src="images/service/quick04_00015.png" alt="1" />
+				<img src="images/service/quick04_00016.png" alt="1" />
+				<img src="images/service/quick04_00017.png" alt="1" />
+				<img src="images/service/quick04_00018.png" alt="1" />
+				<img src="images/service/quick04_00019.png" alt="1" />
+			</div>
+			<div class="txt">
+				<h3>쿠폰혜택 안내</h3>
+				<p>다양한 할인 혜택을 받으세요</p>
+			</div>
+		</div>
 	</div>
-	<!-- //퀵 링크 -->
 
 	<!-- content_wrap -->
 	<div class="content_wrap">
@@ -292,36 +301,61 @@
 		<div class="content_inner">
 			<!-- article1 -->
 			<article>
-				<img src="images/1985547.jpg" alt="twice" class="img_main1" />
+				<!-- 상품 이미지 -->
+				<div class="img_main1">
+					<img src="images/0000002481.jpg" alt="모둠야채피클" />
+				</div>
 				<div class="content1">
-					<img src="images/20170228_1942331.png" alt="mnet" class="logo1" />
-					<p>
-						<strong>SIGNAL</strong>
-						<span>TWICE(트와이스)<br />일간차트 1위</span>
-					</p>
+					<div class="logo">
+						<img src="images/20180803_1419261.png" alt="cj제일제당" />
+					</div>
+					<div class="txt_wrap">
+						<p>모둠 야채 피클</p>
+					</div>
 				</div>
 				<div class="content_cover1">
-					<img src="images/20170228_1942331.png" alt="mnet" />
-					<p>
-						<strong>SIGNAL</strong>
-						<span>TWICE(트와이스)</span>
-						<a href="#">앨범 자세히 보기</a>
-					</p>
+					<div class="deatil_wrap">
+						<div class="logo">
+							<img src="images/20180803_1419261.png" alt="cj제일제당" />
+						</div>
+						<div class="txt_wrap">
+							<p class="title">모둠 야채 피클</p>
+							<p class="text_desc">메뉴 : 김치/저장식품</p>
+							<p class="text_desc">난이도 : 하</p>
+						</div>
+						<div class="btn_wrap">
+							<a href="#">레시피 보기</a>
+						</div>
+					</div>
 				</div>
 			</article>
 			<!-- article2 -->
 			<article>
-				<img src="images/20161229_1643191.jpg" alt="" class="img_main2" />
+				<div class="img_main2">
+					<img src="images/0000002480.jpg" alt="태국식 팟타이" />
+				</div>
 				<div class="content2">
-					<img src="images/20161229_1639541.png" alt="cj도너스캠프" class="logo2" />
-					<p>CJ ONE포인트로 쉽게 기부하고,미래<br />의 주인공이 되...</p>
+					<div class="logo">
+						<img src="images/20180803_1419261.png" alt="cj제일제당" />
+					</div>
+					<div class="txt_wrap">
+						<p>태국식 팟타이</p>
+					</div>
 				</div>
 				<div class="content_cover2">
-					<img src="images/20161229_1639541.png" alt="cj도너스캠프" />
-					<p>
-						CJ ONE포인트로 쉽게 기부하고,미래의 주인공이 되는<br />아이들의 꿈을 응원하는 즐거운 나눔에 동참하세요!
-					</p>
-					<a href="#">자세히 보기</a>
+					<div class="deatil_wrap">
+						<div class="logo">
+							<img src="images/20180803_1419261.png" alt="cj제일제당" />
+						</div>
+						<div class="txt_wrap">
+							<p class="title">태국식 팟타이</p>
+							<p class="text_desc">메뉴 : 일품요리</p>
+							<p class="text_desc">난이도 : 중</p>
+						</div>
+						<div class="btn_wrap">
+							<a href="#">레시피 보기</a>
+						</div>
+					</div>
 				</div>
 			</article>
 			<!-- article3 -->
@@ -376,14 +410,16 @@
 				<div class="content6">
 					<img src="images/logo_facebook_white.png" alt="facebook" class="facebook1" />
 					<img src="images/ico_quotes01.png" alt="" class="ico1" />
-					<p>#CHONE #앱출첵#만<br />렙 도전! 지금 CJ ONE<br />앱을 키고 나의 원스터<br />출첵 레벨 화면을 캡쳐<br />해서 댓글 자랑 뿜뿜하<br />면 콜드브루 라떼 쏩...</p>
+					<p>#CHONE #앱출첵#만<br />렙 도전! 지금 CJ ONE<br />앱을 키고 나의 원스터<br />출첵 레벨 화면을 캡쳐<br />해서 댓글 자랑 뿜뿜하<br />면
+						콜드브루 라떼 쏩...</p>
 					<img src="images/ico_quotes02.png" alt="" class="ico2" />
 				</div>
 				<div class="content_cover6">
 					<img src="images/logo_facebook_blue.png" alt="facebook" class="facebook2" />
 					<img src="images/ico_quotes01_on.png" alt="" class="ico1" />
 					<p>
-						#CHONE #앱출첵#만<br />렙 도전! 지금 CJ ONE<br />앱을 키고 나의 원스터<br />출첵 레벨 화면을 캡쳐<br />해서 댓글 자랑 뿜뿜하<br />면 콜드브루 라떼 쏩...</p>
+						#CHONE #앱출첵#만<br />렙 도전! 지금 CJ ONE<br />앱을 키고 나의 원스터<br />출첵 레벨 화면을 캡쳐<br />해서 댓글 자랑 뿜뿜하<br />면
+						콜드브루 라떼 쏩...</p>
 					<img src="images/ico_quotes02_on.png" alt="" class="ico2" />
 					<a href="#">자세히 보기</a>
 				</div>
@@ -714,9 +750,11 @@
 					</ul>
 				</li>
 			</ul>
-			<p>대표이사 이경배 주소 04320 서울시 용산구 한강대로 336 트윈시티 10~14층 (갈월동,71-13) CJ ONE 고객센터 1577-8888 사업자 등록번호 104-81-36565 개인정보보호책임자
+			<p>대표이사 이경배 주소 04320 서울시 용산구 한강대로 336 트윈시티 10~14층 (갈월동,71-13) CJ ONE 고객센터 1577-8888 사업자 등록번호 104-81-36565
+				개인정보보호책임자
 				박제광</p>
-			<p><img src="images/logo_cjolivenetworks_footer.png" alt="cj 올리브네트웍스" />Copyright(c)2016 CJ OLIVEENETWORKS.All
+			<p><img src="images/logo_cjolivenetworks_footer.png" alt="cj 올리브네트웍스" />Copyright(c)2016 CJ
+				OLIVEENETWORKS.All
 				Rights Reserved</p>
 		</div>
 	</footer>
@@ -740,7 +778,8 @@
 			</ul>
 			<span><img src="images/logo_cjolivenetworks_footer.png" alt="cj 올리브네트웍스" /></span>
 			<span><img src="images/ico_webaccessibility.png" alt="웹접근성 우수사이트 인증" /></span>
-			<p>04320 서울시 한강대로 336 트윈시티 10~14층<br />(갈월동,71-13)<br />대표이사 : 이경배 │ 사업자등록번호 : 104-81-36565<br />CJ ONE 고객센터 :
+			<p>04320 서울시 한강대로 336 트윈시티 10~14층<br />(갈월동,71-13)<br />대표이사 : 이경배 │ 사업자등록번호 : 104-81-36565<br />CJ ONE 고객센터
+				:
 				1577-8888<br />개인정보보호책임자 : 박재광</p>
 			<p>Copyright(c)2016 CJ OLIVEENETWORKS.All Rights<br />Reserved</p>
 		</div>
