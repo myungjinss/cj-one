@@ -1086,12 +1086,12 @@ button {
         .content_wrap .content_inner .hot_content .eleven {
           top: 1473px;
           left: 552px;
-          width: 252px; }
+          width: 220px; }
           .content_wrap .content_inner .hot_content .eleven:hover .content_cover {
             top: 0; }
           .content_wrap .content_inner .hot_content .eleven .img_main {
-            width: 252px;
-            height: 252px; }
+            width: 220px;
+            height: 220px; }
             .content_wrap .content_inner .hot_content .eleven .img_main img {
               top: 0; }
           .content_wrap .content_inner .hot_content .eleven .content {
@@ -1102,7 +1102,6 @@ button {
             left: 0; }
             .content_wrap .content_inner .hot_content .eleven .content_cover .btn_wrap {
               padding-top: 30px; }
-  /* article11 */
   /* article12 */
   .content_inner article:nth-of-type(12) {
     position: absolute;
